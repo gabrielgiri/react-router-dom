@@ -47,13 +47,21 @@ header li a:hover {
 }
 
 .seasons {
-  height: 100%;
-  display: flex;
+  animation-duration: 20s;
+  animation-name: seasons;
   align-items: center;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   justify-content: center;
-  animation-name: example2;
-  animation-duration: 15s;
-  background-size: 100%
+}
+
+.seasons p{
+  max-width: 80%;
+  font-size: 20px;
+  line-height: 30px;
+  text-shadow: 1px 1px 3px whit
 }
 
 .winter {
@@ -78,19 +86,19 @@ header li a:hover {
   flex-direction: row;
 }
 
-  .Parent {
-    display: flex;
-    flex-direction: row;
-  }
+.Parent {
+  display: flex;
+  flex-direction: row;
+}
 
 .left {
-  height: 100vh;
+  align-items: center;
   background-color: #bf8924;
-  text-align: right;
+  border-right: solid 3px #fff;
   color: white;
   display: flex;
-  align-items: center;
-  border-right: solid 3px #fff;
+  height: 100vh;
+  text-align: right;
   width: 14%;
 }
 
@@ -100,22 +108,20 @@ header li a:hover {
 }
 
 .right h1{
+  animation-name: seasonstext;
+  animation-duration: 3s;
+  font-size: 110px;
   font-weight: bold;
   text-transform: uppercase;
-  animation-name: example;
-  animation-duration: 3s;
-  font-size: 90px;
   transition-timing-function: ease-in;
-
 }
 
-
-@keyframes example {
-  from {font-size: 10px; opacity: 0;}
-  to {font-size: 90px; opacity: 1;}
+@keyframes seasonstext {
+  from {font-size: 10px; opacity: .3;}
+  to {font-size: 110px; opacity: 1;}
 }
 
-@keyframes example2 {
-  from { opacity: 0; background-size: 130%}
-  to { opacity: 1; background-size: 100%}
+@keyframes seasons {
+  from { opacity: .3; background-size: 150%; filter: blur(3px);}
+  to { opacity: 1; background-size: 100%; filter: blur(0);}
 }
