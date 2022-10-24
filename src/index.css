@@ -1,13 +1,121 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  width: 100%;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+header h1 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header ul {
+  padding: 0;
+}
+
+header li {
+  list-style: none;
+  font-size: 20px;
+}
+
+header li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+header li a:hover {
+  background-color: white;
+  color: #bf8924;
+}
+
+.seasons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: example2;
+  animation-duration: 15s;
+  background-size: 100%
+}
+
+.winter {
+  background-image: url("./images/winter.jpg");
+}
+
+.autumn {
+  background-image: url("./images/autumn.jpg");
+}
+
+.spring {
+  background-image: url("./images/spring.jpg");
+}
+
+.summer {
+  background-image: url("./images/summer.jpg");
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+  .Parent {
+    display: flex;
+    flex-direction: row;
+  }
+
+.left {
+  height: 100vh;
+  background-color: #bf8924;
+  text-align: right;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-right: solid 3px #fff;
+  width: 14%;
+}
+
+.right {
+  height: 100vh;
+  width: 86%;
+}
+
+.right h1{
+  font-weight: bold;
+  text-transform: uppercase;
+  animation-name: example;
+  animation-duration: 3s;
+  font-size: 90px;
+  transition-timing-function: ease-in;
+
+}
+
+
+@keyframes example {
+  from {font-size: 10px; opacity: 0;}
+  to {font-size: 90px; opacity: 1;}
+}
+
+@keyframes example2 {
+  from { opacity: 0; background-size: 130%}
+  to { opacity: 1; background-size: 100%}
 }
